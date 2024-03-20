@@ -8,35 +8,38 @@ import java.io.IOException;
 public class Notas_E_Moedas {
 
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
-        double valor = scanner.nextDouble();
-        //convertendo a variável valor, que é do tipo double, para o tipo int (inteiro).
-        int valorInteiro = (int) valor;
-        //calcula a parte decimal do valor fornecido.
-        // Subtrai-se o valor inteiro do valor total para obter as casas decimais.
-        // Multiplica por 100 para converter a parte decimal em centavos
-        calculaNotas(valorInteiro);
-        int parteDecimal = (int) ((valor - valorInteiro) * 100);
-        calculaMoedas(parteDecimal);
+        Scanner s = new Scanner(System.in);
+        double valor = s.nextDouble();
+        int valorInteiro = calculaInteiro(valor);
+        int valorDecimal = calculaDecimal(valor, valorInteiro);
     }
 
-    public static int calculaNotas(int inteiroValor) {
+    public static int calculaInteiro(double valor) {
+        int parteInteira = (int) valor;
+        int aux = parteInteira;
+
         int[] notas = {100, 50, 20, 10, 5, 2};
+      
         System.out.println("NOTAS:");
         for (int nota : notas) {
-            int quantidade = inteiroValor / nota;
-            inteiroValor %= nota;
-            System.out.printf("%d nota(s) de R$ %.2f%n", quantidade, (double) nota);
+            int quantidade = aux / nota;
+            aux %= nota;
+            System.out.printf("%d nota(s) de R$ %d.00%n", quantidade, nota);
         }
-        return inteiroValor;
+
+        return (parteInteira-aux);
     }
-    public static Double calculaMoedas(double parteDecimal) {
-        double[] moedas = {1.00, 0.50, 0.25, 0.10, 0.05, 0.01};
+
+    public static int calculaDecimal(double valor, int valorInteiro) {
+        int parteDecimal = (int) ((valor - valorInteiro) * 100);
+
+        
+        int[] moedas = {100, 50, 25, 10, 5, 1};
         System.out.println("MOEDAS:");
-        for (double moeda : moedas) {
-            int quantidade = (int) (parteDecimal / (moeda * 100));
-            parteDecimal %= (int) (moeda * 100);
-            System.out.printf("%d moeda(s) de R$ %.2f%n", quantidade, moeda);
+        for (int moeda : moedas) {
+            int quantidade = parteDecimal / moeda;
+            parteDecimal %= moeda;
+            System.out.printf("%d moeda(s) de R$ %.2f%n", quantidade, moeda / 100.0);
         }
         return parteDecimal;
     }
