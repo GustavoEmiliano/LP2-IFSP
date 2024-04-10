@@ -1,0 +1,15 @@
+Atividade primeiro bimestre LP2: Exercício escolido - Questão 2 - Papel da Classe Object
+
+Escolha uma das questões da prova e discorra num texto de 20 linhas (aprox. 1600 caracteres) sobre o seu entendimento no assunto.
+Não use GPT ou ferramentas de pesquisa, a fonte neste caso serão as vozes do seu saber.
+O intuito desta atividade é compreender o quanto foi possível compreender do tema, portanto, escolha uma questão que teve dificuldade. 
+
+Texto:
+
+A classe Object no Java é de suma importância já que o Java funciona a partir do conceito POO(Progamação Orientada a Objetos), nos quais os Objetos são fundamentais
+na construção de uma solução.A classe object é herdada por todas as outras classes do Java, sendo assim a superclasse de todas as outras classes diretamente ou
+indiretamente.Além disso ela é responsável por definir alguns comportamentos básicos de um objeto, como por exemplo a capacidade de comparar uns com os outros
+utilizando o método equals.Também há o método tostring()que basicamente ele repreenta o Objeto como um texto(STRING)
+
+
+ elementos fundamentais na construção da solução
