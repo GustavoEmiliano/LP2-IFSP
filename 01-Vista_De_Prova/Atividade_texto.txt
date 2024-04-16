@@ -6,10 +6,29 @@ O intuito desta atividade é compreender o quanto foi possível compreender do t
 
 Texto:
 
-A classe Object no Java é de suma importância já que o Java funciona a partir do conceito POO(Progamação Orientada a Objetos), nos quais os Objetos são fundamentais
-na construção de uma solução.A classe object é herdada por todas as outras classes do Java, sendo assim a superclasse de todas as outras classes diretamente ou
-indiretamente.Além disso ela é responsável por definir alguns comportamentos básicos de um objeto, como por exemplo a capacidade de comparar uns com os outros
-utilizando o método equals.Também há o método tostring()que basicamente ele repreenta o Objeto como um texto(STRING)
+    A classe Object do Java é essencial para a programação orientada a 
+objetos, pois serve como base para todas as outras classes e fornece recursos 
+essenciais necessários para uma interação eficaz no ambiente Java. Métodos 
+como hashCode() estão entre essas funcionalidades e são essenciais para 
+organizar objetos em estruturas como HashMaps e HashSets, otimizando assim 
+o acesso aos dados. Além disso, a capacidade de clonagem, que é fornecida 
+pela classe Object por meio do método clone(), é essencial em vários contextos 
+para replicar objetos de forma controlada sem comprometer a integridade dos 
+dados. Isso é particularmente útil em situações em que cópias simples de 
+referências podem causar problemas de compartilhamento indesejado de dados 
+entre objetos.
 
-
- elementos fundamentais na construção da solução
+    É fundamental entender a importância da classe Object e seus métodos 
+básicos. Por exemplo, o método equals (Object obj) é usado para verificar se 
+dois objetos são iguais de acordo com critérios especificados pelo programador. 
+Este método é essencial para a lógica de comparação de objetos em Java e 
+também permite verificar a igualdade de instâncias de classes personalizadas. 
+Além disso, o método toString() fornece uma representação do objeto em 
+formato string, o que é útil para exibir informações de forma legível para pessoas, 
+especialmente durante a depuração e em situações em que a apresentação 
+textual dos objetos é necessária. Por último, mas não menos importante, o 
+método hashCode() pode ser usado para obter um valor inteiro que represente 
+o objeto de forma distinta. Este método é frequentemente usado em estruturas 
+de dados como HashMaps para para otimizar a busca e a organização dos 
+objetos, o que permite um acesso rápido e eficiente às informações 
+armazenadas.
